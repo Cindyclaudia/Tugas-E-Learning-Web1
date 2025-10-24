@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cindy Claudia Septiani</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      background-color: #ffffff; /* warna lembut */
+      color: #000000;
+      padding: 20px;
+    }
+
+    .card {
+      max-width: 650px;
+      margin: 50px auto;
+      background-color: #f7d1e7;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d654be;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 25px;
+      background-color: #d654be;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background-color: #ed00d2;
+    }
+
+    #output {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #d654be;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <header>
+      <h1>Nama Mahasiswa</h1>
+    </header>
+
+    <main>
+      <p>
+        Halo, nama saya <b>Cindy Claudia Septiani</b>, seorang mahasiswa dari Universitas Teknologi Bandung. 
+        Saya senang mengeksplorasi hal-hal kreatif dan belajar hal baru setiap hari.
+      </p>
+
+      <p>
+        Di waktu senggang, saya suka mendengarkan musik K-pop, menonton film, dan terkadang bermain game. 
+        Kegiatan ini membuat saya rileks sekaligus memberi inspirasi untuk ide-ide kreatif.
+      </p>
+
+      <p>
+        Selain itu, saya juga menikmati waktu bercerita bersama teman-teman saya, menceritakan idola kami 
+        dan mendengarkan musik bersama saat waktu luang.
+      </p>
+
+      <button onclick="tampilkanTips()">Dapatkan Tips Santai</button>
+      <div id="output">Klik tombol untuk melihat tips santai!</div>
+    </main>
+  </div>
+
+  <script>
+    function tampilkanTips() {
+      const tips = [
+        "Luangkan waktu 10 menit sehari untuk mendengarkan lagu favoritmu.",
+        "Tonton film ringan saat penat agar pikiran rileks.",
+        "Bermain game sesekali bisa membantu melepas stres.",
+        "Coba kombinasikan hobi-mu dengan kegiatan belajar agar lebih menyenangkan!"
+      ];
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      document.getElementById("output").textContent = tips[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
